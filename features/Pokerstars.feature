@@ -1,27 +1,14 @@
-Feature: Pokerstars Website
+Feature: Pokerstars Home Page
 
   Scenario : As a user, I can launch the website
 
     Given I am on the pokerstars website
-    When I view the page
-    Then I should see the POCKERSTARS logo
+    Then  I verify the POCKERSTARS logo
 
-  Scenario : As a user, I can launch the website
+  Scenario : As a user, I should verify the tabs
 
-    Given I am on the pokerstars website
-    When I view the page
-    Then I should see two <links> right next to the logo
-
-  Examples:
-    | links              |
-    | Responsible Gaming |
-    | Help               |
-
-  Scenario : As a user, I can launch the website
-
-    Given I am on the pokerstars website
-    When I view the page
-    Then I should see three tabs <tabs>
+    When I am on the pokerstars website
+    Then I should verify three tabs <tabs>
 
   Examples:
     | tabs   |
@@ -29,16 +16,14 @@ Feature: Pokerstars Website
     | CASINO |
     | SPORTS |
 
-  Scenario : As a user, I can launch the website
+  Scenario : As a user, I verify the poker images
 
-    Given I am on the pokerstars website
-    When I view the page
-    Then images related to "sports" are shown on the results page
+    When I am on the pokerstars website
+    Then images related to "poker" are shown on the results page
 
-  Scenario: Pocker home page
+  Scenario: As a user, I verify the welcome message
 
-    Given a web browser is at Pockerstars page
-    When I attempt to navigate to POCKER home page
+    When I am on the pokerstars home page
     Then I should see a flash message saying <message>
 
     Examples:
@@ -46,10 +31,9 @@ Feature: Pokerstars Website
       | Welcome offers                                                  |
       | Make sure to use our available welcome offers when you register!|
 
- Scenario: Pocker home page Video
+ Scenario: As a user, I should verify the poker video
 
-    Given a web browser is at Pockerstars page
-    When I attempt to navigate to POCKER home page
+    When I am on poker home page
     Then I should see a flash <video> attached a link
 
     Examples:
@@ -57,9 +41,9 @@ Feature: Pokerstars Website
       | Download PokerStars |                                                |
       
   Scenario: Home page buttons
-    Given I navigates to the Pocker home page
-    When I view the page
-    Then I should see two <buttons> on the right top of the page
+
+    When I am on the home page
+    Then I should verify two <buttons> on the right top of the page
 
     Examples:
     | buttons |
@@ -67,9 +51,9 @@ Feature: Pokerstars Website
     | Join    |
 
   Scenario: Home page header links
-    Given I navigates to the Pocker home page
-    When I view header of the page
-    Then All the <Header links> related to "home page" will be shown
+
+    When I am on the home page
+    Then I should verify All the <Header links> related to "home page" will be shown
 
     Examples:
     | Header links         |
@@ -77,9 +61,8 @@ Feature: Pokerstars Website
     | Store                |
 
   Scenario: Home page Sub header links
-    Given I navigates to the Pocker home page
-    When I view subheader of the page
-    Then All the <Sub Header Links> related to "home page" will be shown
+    When I am on the home page
+    Then I should verify All the <Sub Header Links> related to "home page" will be shown
 
     | Sub Header Links      |
     | Home                  |
@@ -92,7 +75,7 @@ Feature: Pokerstars Website
     | Home Games            |
 
   Scenario: Home page Scroll down
-    Given I navigates to the Pocker home page
+
     When I scroll down to the page
     I should see two <buttons> with Bonus Code
     And I should see a flash message saying <message>
@@ -100,3 +83,19 @@ Feature: Pokerstars Website
     | message                   | 
     | The home of poker         |
     | Download. Register. Play. |
+
+    Scenario: Download poker star
+  
+    When I am on the home page
+    And I Download the poker star
+
+    Scenario: Safe & secure
+  
+    When I am on the home page
+    And I should verify Safe & secure section
+
+    Scenario: Find out more
+  
+    When I am on the home page
+    And I should click on the Find out more
+    And verify the page
