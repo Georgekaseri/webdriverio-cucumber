@@ -5,7 +5,7 @@ Scenario Outline: As a user, I can launch to the poker website
   Given I am on the poker website
   Then  I should see verify the poker logo
 
-  Scenario Outline: As a user, I can launch to the poker website  
+  Scenario Outline: As a user, I verify the poker welcome message 
 
     Given I am on the poker page
     Then I should see a flash message saying <message>
@@ -38,12 +38,12 @@ Scenario Outline: As a user, I can launch to the poker website
     When I am on the pokerstar home page
     Then I should verify the Download PokerStars link
 
-  Scenario Outline: As a user, I verify the Download PokerStars link
+  Scenario Outline: As a user, I verify poker video on the home page
 
     When I am on the pokerstar page
     Then I should verify the poker video
 
-  Scenario Outline: As a user, I verify all the links preset in the page
+  Scenario Outline: As a user, I scroll down and verify home of poker
 
     Given I am on the page
     When  I scroll down
