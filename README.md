@@ -76,7 +76,9 @@ This project uses a trunk-based strategy.
 ## Useful links
 
 https://webdriver.io/docs/frameworks/#using-cucumber
+
 https://dzone.com/articles/webdriverio-integration-with-cucumber
+
 https://webdriver.io/docs/api/element/isEqual
 
 **`Happy Testing :)`**
