@@ -57,6 +57,11 @@ To run Task 2 in your local
 
 **`npm run test`**
 
+The test is going to run against the feature file : homePage.feature
+Scenario has been covered :
+
+### Automated Scenarios : /webdriverio-cucumber/features/homePage.feature
+
 **IMPORTANT**
 
 ### Branching Strategy
